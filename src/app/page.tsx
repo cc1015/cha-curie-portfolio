@@ -1,14 +1,30 @@
 export default function base() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col row-start-2 sm:items-start">
-        <h6 className="text-left">Curie Cha</h6>
-        <ul className="flex space-x-4 text-sm">
-          <a>Item 1</a>
-          <a>Item 2</a>
-          <a>Item 3</a>
-        </ul>
-      </main>
-    </div>
+    <main className="flex items-center space-x-4 mx-8 sm:mx-16">
+      {/* Image on the left */}
+      <figure className="flex flex-col items-center sm:items-start">
+        <img src='/PC260588.JPG' alt="personal photo" className="w-100 h-100 object-contain"
+        />
+        <figcaption className="mt-2 text-sm">
+          halmoni appreciation:)
+        </figcaption>
+      </figure>
+      <div>
+        <p>Hi, I am Curie.</p>
+        <br />
+        <p>
+          I am a student passionate about using software for social good and scientific research. My
+          interests lie in computational modeling and software development in
+          various applications of life sciences and healthcare. I am studying 
+          computer science, biology, and math at Northeastern
+          University. 
+        </p>
+        <br />
+        <p>
+          In my free time, I like to explore other passions of music,
+          photography, and enjoying the outdoors.
+        </p>
+      </div>
+    </main>
   );
 }

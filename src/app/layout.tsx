@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import TabBar from "./components/TabBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <TabBar />
+        <div className="min-h-screen sm:px-32 pb-8 sm:p-8 font-[family-name:var(--font-geist-sans)]">
+          {children}
+        </div>
       </body>
     </html>
   );
