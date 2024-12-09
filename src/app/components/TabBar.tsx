@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const TabBar = () => {
   return (
@@ -13,15 +15,16 @@ const TabBar = () => {
               href="https://github.com/cc1015"
               target="_blank"
               rel="noopener noreferrer"
-            >github</a>
+            ><FaGithub size={24} /></a>
             <a
               className="text-right"
               href="https://www.linkedin.com/in/curiecha"
               target="_blank"
               rel="noopener noreferrer"
-            >linkedin</a>
+            ><FaLinkedin size={24} />
+            </a>
           </div>
-          <h3 className="text-left text-sm">cha.c[at]northeastern[dot]edu</h3>
+          <h3 className="text-left text-sm">cha[dot]c[at]northeastern[dot]edu</h3>
           <ul className="flex space-x-8 text-base">
             <Link href="/" className="hover:text-yellow-300">
               Home

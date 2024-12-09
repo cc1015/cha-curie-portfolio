@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
@@ -66,7 +67,7 @@ export default function Base() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:underline"
-              >github
+              ><FaGithub size={24} />
               </a>{" "}
               {project.description}
             </div>
