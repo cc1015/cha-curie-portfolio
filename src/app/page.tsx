@@ -1,18 +1,20 @@
 export default function base() {
   return (
     <main className="flex items-center space-x-4 mx-8 sm:mx-16">
-      {/* Image on the left */}
       <figure className="flex flex-col items-center sm:items-start">
-        <img src='/PC260588.JPG' alt="personal photo" className="w-100 h-100 object-contain"
+        <img src='/bumblebee.jpg' alt="personal photo" className="w-100 h-100 object-contain"
         />
-        <figcaption className="mt-2 text-sm">
-          halmoni appreciation:)
+        <figcaption className="mt-2 text-sm italic ">
+          Dream Caused by the Flight of a Bee Around a Pomegranate a Second Before Awakening, Dali
+          <br />
+          <br />
+          Credit: © 2009 Salvador Dalí, Gala-Salvador Dalí Foundation / Artists Rights Society (ARS), New York, Courtesy of Art Resource, NY/Photo by Erich Lessing
         </figcaption>
       </figure>
       <div>
-        <p>Hi, I am Curie.</p>
+        <p className="text-justify">Hi, my name is Curie.</p>
         <br />
-        <p>
+        <p className="text-justify">
           I am a student passionate about using software for social good and scientific research. My
           interests lie in computational modeling and software development in
           various applications of life sciences and healthcare. I am studying 
@@ -20,7 +22,7 @@ export default function base() {
           University. 
         </p>
         <br />
-        <p>
+        <p className="text-justify">
           In my free time, I like to explore other passions of music,
           photography, and enjoying the outdoors.
         </p>
