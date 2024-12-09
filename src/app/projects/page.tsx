@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Icon } from "@iconify/react";
-import githubIcon from "@iconify/icons-simple-icons/github";
 
 const projects = [
   {
@@ -68,8 +66,7 @@ export default function Base() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:underline"
-              >
-                <Icon icon={githubIcon} className="w-6 h-6 mr-2" />
+              >github
               </a>{" "}
               {project.description}
             </div>

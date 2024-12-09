@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Icon } from "@iconify/react";
 
 const TabBar = () => {
   return (
@@ -14,23 +13,13 @@ const TabBar = () => {
               href="https://github.com/cc1015"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <Icon
-                icon="bi:github"
-                className="w-6 h-6 text-gray-700 hover:text-gray-900"
-              />
-            </a>
+            >github</a>
             <a
               className="text-right"
               href="https://www.linkedin.com/in/curiecha"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <Icon
-                icon="bi:linkedin"
-                className="w-6 h-6 text-gray-700 hover:text-gray-900"
-              />
-            </a>
+            >linkedin</a>
           </div>
           <h3 className="text-left text-sm">cha.c[at]northeastern[dot]edu</h3>
           <ul className="flex space-x-8 text-base">
