@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 export default function base() {
   return (
     <main className="flex flex-col space-y-2 items-start mx-8 sm:mx-16">
