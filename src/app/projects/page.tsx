@@ -47,7 +47,18 @@ export default function Base() {
   };
 
   return (
-    <main className="flex flex-col space-y-1 items-start mx-8 sm:mx-16">
+    <main className="flex overflow-y-auto">
+      <figure className="flex flex-col sm:items-start w-1/2 sticky top-0">
+        <img src='/swallows_tail_cellos.jpg' alt="personal photo" className="w-100 h-100 object-contain"
+        />
+        <figcaption className="mt-2 text-sm italic ">
+        Swallow’s Tail and Cellos (Catastrophes Series), Dali
+          <br />
+          <br />
+          Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres
+        </figcaption>
+      </figure>
+      <div className="flex flex-col space-y-1 items-start mx-8 sm:mx-16 w-3/4 overflow-y-auto">
       <h1 className="text-xl">Projects</h1>
       {projects.map((project) => (
         <div key={project.id} className="mb-4 pb-4">
@@ -74,6 +85,7 @@ export default function Base() {
           )}
         </div>
       ))}
+      </div>
     </main>
   );
 }
