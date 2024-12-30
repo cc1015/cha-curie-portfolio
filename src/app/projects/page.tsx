@@ -32,6 +32,13 @@ const projects = [
       "This is an analysis of California wildfires and ashthma-related emergency department visits. A correlation between the overall increase of wildfires in California over time and the increase in asthmatic issues present in the California population over time was found.",
     href: "https://github.com/cc1015/Asthma-Wildfire-Analysis",
   },
+  {
+    id: 5,
+    title: "Data Science Mini-Projects",
+    description:
+      "This repo contains notebook files of mini data science projects.\n- Condorcet Jury Theorem Simulation\n- Infection Simulation\n- Gene Disease Assocation Exploration\n- Tree Density Map of Boston\n- Crime and Cannabis Correlation in Boston",
+    href: "https://github.com/cc1015/data-science-mini-projects",
+  },
 ];
 
 export default function Base() {
@@ -80,7 +87,11 @@ export default function Base() {
                 className="flex items-center hover:underline"
               ><FaGithub size={24} />
               </a>{" "}
-              {project.description}
+              <p
+                  dangerouslySetInnerHTML={{
+                    __html: project.description.replace(/\n/g, "<br />"),
+                  }}
+                ></p>
             </div>
           )}
         </div>

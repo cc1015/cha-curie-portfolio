@@ -115,17 +115,6 @@ export default function Base() {
             )}
           </div>
         ))}
-
-        <h1 className="text-xl">Coursework</h1>
-        <ul className="flex-col space-y-1 text-base">
-          <h2>BINF6310, Computational Methods in Bioinformatics</h2>
-          <h2>CS3000, Algorithms and Data</h2>
-          <h2>CS3500, Objects Oriented Design</h2>
-          <h2>CS3200, Database Design</h2>
-          <h2>DS3000, Foundations of Data Science</h2>
-          <h2>CHEM2311, Organic Chemistry</h2>
-          <h2>BIOL2301, Genetics and Molecular Biology</h2>
-        </ul>
       </div>
       <figure className="flex flex-col sm:items-start w-1/2 sticky top-0">
         <img src='/galatea.jpg' alt="personal photo" className="w-100 h-100 object-contain"
