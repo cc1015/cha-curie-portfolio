@@ -17,7 +17,7 @@ export default function Base() {
   ];
 
   return (
-    <main className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 mx-8 sm:mx-16">
+    <main className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2 sm:mx-0">
       {images.map((src, index) => (
         <img
           key={index}

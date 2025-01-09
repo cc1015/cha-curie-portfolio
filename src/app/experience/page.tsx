@@ -63,11 +63,29 @@ export default function Base() {
     <main className="flex sm:items-start h-screen">
       <div className="flex flex-col space-y-1 items-start mx-8 sm:mx-16 w-1/2 overflow-y-auto">
         <h1 className="text-xl">Work</h1>
+        <div key="7" className="mb-4 pb-4 whitespace-pre-line">
+            <button
+              onClick={() => handleToggle(7)}
+              className={`font-bold px-2 text-left hover:underline ${
+                expandedItemIds.includes(7) ? "underline" : ""
+              }`}
+            >
+              Reseach Assistant, Gyori Lab for Computational Biomedicine
+            </button>
+
+            {expandedItemIds.includes(7) && (
+              <div className="mt-2">
+                <p>
+                •  Developing and integrating a large language model into <a href="https://www.indra.bio/" target="_blank" className="underline text-blue-950">INDRA</a> for evidence extraction and classification.
+                </p>
+              </div>
+            )}
+          </div>
         {workitems.map((workitem) => (
           <div key={workitem.id} className="mb-4 pb-4 whitespace-pre-line">
             <button
               onClick={() => handleToggle(workitem.id)}
-              className={`px-2 text-left hover:underline ${
+              className={`font-bold px-2 text-left hover:underline ${
                 expandedItemIds.includes(workitem.id) ? "underline" : ""
               }`}
             >
@@ -85,7 +103,7 @@ export default function Base() {
           <div key={leaderitem.id} className="mb-4 pb-4 whitespace-pre-line">
             <button
               onClick={() => handleToggle(leaderitem.id)}
-              className={`px-2 text-left hover:underline ${
+              className={`font-bold px-2 text-left hover:underline ${
                 expandedItemIds.includes(leaderitem.id) ? "underline" : ""
               }`}
             >
@@ -103,7 +121,7 @@ export default function Base() {
           <div key={teachitem.id} className="mb-4 pb-4 whitespace-pre-line">
             <button
               onClick={() => handleToggle(teachitem.id)}
-              className={`px-2 text-left hover:underline ${
+              className={`font-bold px-2 text-left hover:underline ${
                 expandedItemIds.includes(teachitem.id) ? "underline" : ""
               }`}
             >
@@ -116,16 +134,21 @@ export default function Base() {
           </div>
         ))}
       </div>
-      <figure className="flex flex-col sm:items-start w-1/2 sticky top-0">
-        <img src='/galatea.jpg' alt="personal photo" className="w-100 h-100 object-contain"
+      <div className="flex flex-col sm:items-start w-1/2 sticky top-0 relative group inline-block">
+        <img
+          src="/galatea.jpg"
+          alt="personal photo"
+          className="w-2/3 object-contain"
         />
-        <figcaption className="mt-2 text-sm italic ">
-        Galatea of the Spheres, Dali
-          <br />
-          <br />
-          Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres
-        </figcaption>
-      </figure>
+        <div className="absolute h-full w-2/3 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
+          <div className="text-center text-gray-300">
+            Galatea of the Spheres, Dali
+            <br />
+            <br />
+            Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

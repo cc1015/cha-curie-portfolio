@@ -16,10 +16,7 @@ export default function base() {
         >
           Contagious Cancer
         </Link>
-        <Link
-          href="/writing/synesthesia"
-          className="hover:text-yellow-300"
-        >
+        <Link href="/writing/synesthesia" className="hover:text-yellow-300">
           Synesthesia
         </Link>
         <br></br>
@@ -27,16 +24,21 @@ export default function base() {
         *[in the process of creating graphic visuals for these to break up the
         condensed words]
       </div>
-      <figure className="flex flex-col sm:items-start w-1/2 sticky top-0">
-        <img src='/the_image_disappears.jpg' alt="personal photo" className="w-100 h-100 object-contain"
+      <div className="flex flex-col sm:items-start w-1/2 sticky top-0 relative group inline-block">
+        <img
+          src="/the_image_disappears.jpg"
+          alt="personal photo"
+          className="object-contain w-2/3 h-100"
         />
-        <figcaption className="mt-2 text-sm italic ">
-        The Image Disappears, Dali
-          <br />
-          <br />
-          Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres
-        </figcaption>
-      </figure>
+        <div className="absolute h-full w-2/3 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
+          <div className="text-center text-gray-300">
+            The Image Disappears, Dali
+            <br />
+            <br />
+            Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
