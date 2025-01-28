@@ -3,7 +3,7 @@ import { Enriqueta } from 'next/font/google'
 import "./globals.css";
 import TabBar from "./components/TabBar";
 
-const mono = Enriqueta({ subsets: ['serif'], weight: '400' })
+const mono = Enriqueta({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: "Curie Cha",
