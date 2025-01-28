@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image'
 
 export default function Base() {
   const images = [
@@ -19,12 +20,17 @@ export default function Base() {
   return (
     <main className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2 sm:mx-0">
       {images.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`photo-${index + 1}`}
-          className="w-full h-auto object-contain"
-        />
+        <div key={index} className="w-full h-auto">
+          <Image
+            key={index}
+            src={src}
+            alt={`photo-${index + 1}`}
+            className="object-contain"
+            layout="intrinsic"
+            width={500} 
+            height={300}
+          />
+        </div>
       ))}
     </main>
   );

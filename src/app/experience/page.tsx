@@ -1,6 +1,7 @@
 "use client";
+import Image from 'next/image'
 
-import { useState } from "react";
+// import { useState } from "react";
 
 const workitems = [
   {
@@ -32,7 +33,7 @@ const teachingitems = [
 ];
 
 export default function Base() {
-  const [expandedItemIds, setExpandedItemIds] = useState<number[]>([]); // Store multiple expanded items
+  // const [expandedItemIds, setExpandedItemIds] = useState<number[]>([]); // Store multiple expanded items
 
   /*
   // Toggle the expansion of a specific item
@@ -70,10 +71,13 @@ export default function Base() {
         ))}
       </div>
       <div className="flex flex-col sm:items-start w-1/2 sticky top-0 relative group inline-block">
-        <img
+        <Image
           src="/galatea.jpg"
           alt="personal photo"
           className="w-2/3 object-contain"
+          layout="intrinsic"
+          width={500} 
+          height={300}
         />
         <div className="absolute h-full w-2/3 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
           <div className="text-center text-gray-300">

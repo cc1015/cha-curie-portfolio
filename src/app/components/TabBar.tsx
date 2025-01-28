@@ -49,6 +49,7 @@ const TabBar = () => {
               href="https://github.com/cc1015"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-yellow-300"
             >
               <FaGithub size={20} />
             </a>&nbsp;&nbsp;/&nbsp;&nbsp;
@@ -56,6 +57,7 @@ const TabBar = () => {
               href="https://www.linkedin.com/in/curiecha"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-yellow-300"
             >
               <FaLinkedin size={20} />
             </a>

@@ -3,7 +3,7 @@ import { Noto_Sans_Hatran } from 'next/font/google'
 import "./globals.css";
 import TabBar from "./components/TabBar";
 
-const mono = Noto_Sans_Hatran({ subsets: ['serif'], weight: '400' })
+const mono = Noto_Sans_Hatran({ subsets: ['hatran'], weight: '400' })
 
 export const metadata: Metadata = {
   title: "Curie Cha",

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
+import Image from 'next/image'
 
 const projects = [
   {
@@ -56,10 +57,13 @@ export default function Base() {
   return (
     <main className="flex overflow-y-auto">
       <div className="flex flex-col sm:items-start w-1/2 sticky top-0 relative group inline-block">
-        <img
+        <Image
           src="/swallows_tail_cellos.jpg"
           alt="personal photo"
           className="object-contain"
+          layout="intrinsic"
+          width={500} 
+          height={300}
         />
         <div className="absolute h-full opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
           <div className="text-center text-gray-300">
@@ -76,8 +80,8 @@ export default function Base() {
         <div key={project.id} className="mb-4 pb-4">
           <button
             onClick={() => handleToggle(project.id)}
-            className={`font-bold px-2 text-left hover:underline ${
-              expandedItemIds.includes(project.id) ? "underline" : ""
+            className={`font-bold px-2 text-left underline hover:text-yellow-300 ${
+              expandedItemIds.includes(project.id) ? "text-yellow-300" : ""
             }`}
           >
             {project.title}
@@ -88,8 +92,7 @@ export default function Base() {
               <a
                 href={project.href}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center hover:underline"
+                className="flex items-center"
               ><FaGithub size={24} />
               </a>{" "}
               <p
