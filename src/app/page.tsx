@@ -27,14 +27,15 @@ export default function base() {
         <p className="text-justify">
           I am a student excited about how software can inform and shape our
           understanding of the world. My interests lie in computational modeling
-          and software development applied to various applications of life
-          sciences and healthcare. I am studying computer science, biology, and
+          and software development for various applications of life
+          sciences, healthcare, and natural language. I am studying computer science, biology, and
           math at Northeastern University.
         </p>
         <br />
         <p className="text-justify">
-          In my free time, I like to explore other passions of music,
-          photography, and enjoying the outdoors.
+          I like to think and ask questions about our natural surroundings in 
+          hopes of contributing to social and scientific progress. Lately, 
+          I have been digging into machine learning capabilities for drug discovery.
         </p>
       </div>
     </main>

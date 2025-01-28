@@ -8,16 +8,16 @@ export default function base() {
           href="/writing/turing"
           className="hover:text-yellow-300 text-right"
         >
-          Turing
+          turing
         </Link>
         <Link
           href="/writing/cancer"
           className="hover:text-yellow-300 text-right"
         >
-          Contagious Cancer
+          contagious cancer
         </Link>
         <Link href="/writing/synesthesia" className="hover:text-yellow-300">
-          Synesthesia
+          synesthesia
         </Link>
         <br></br>
         <br></br>

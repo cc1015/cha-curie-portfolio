@@ -11,28 +11,28 @@ const TabBar = () => {
   const tabitems = [
     {
       id: 1,
-      title: "Home",
+      title: "home",
       href: "/",
     },
     {
       id: 2,
-      title: "Experience",
-      href: "/experience",
-    },
-    {
-      id: 3,
-      title: "Projects",
+      title: "projects",
       href: "/projects",
     },
     {
+      id: 3,
+      title: "experience",
+      href: "/experience",
+    },
+    {
       id: 4,
-      title: "Photos",
-      href: "/photos",
+      title: "words",
+      href: "/writing",
     },
     {
       id: 5,
-      title: "Writing",
-      href: "/writing",
+      title: "photos",
+      href: "/photos",
     },
   ];
 
@@ -41,25 +41,24 @@ const TabBar = () => {
       <div className="sm:pt-32 sm:pl-32 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col items-start ml-8 sm:ml-16">
           <div className="flex space-x-2 justify-start">
-            <h3 className="text-left text-2xl">Curie Cha</h3>
+            <h3 className="text-left text-2xl">curie cha</h3>
+          </div>
+          <h3 className="text-left text-sm flex items-center mb-4">
+            cha[dot]c[at]northeastern[dot]edu&nbsp;&nbsp;/&nbsp;&nbsp;    
             <a
               href="https://github.com/cc1015"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub size={24} />
-            </a>
+              <FaGithub size={20} />
+            </a>&nbsp;&nbsp;/&nbsp;&nbsp;
             <a
-              className="text-right"
               href="https://www.linkedin.com/in/curiecha"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={20} />
             </a>
-          </div>
-          <h3 className="text-left text-sm">
-            cha[dot]c[at]northeastern[dot]edu
           </h3>
           <ul className="flex space-x-8 text-base">
             {tabitems.map((tab) => (
