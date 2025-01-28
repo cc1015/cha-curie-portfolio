@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Hatran } from 'next/font/google'
+import { Enriqueta } from 'next/font/google'
 import "./globals.css";
 import TabBar from "./components/TabBar";
 
-const mono = Noto_Sans_Hatran({ subsets: ['hatran'], weight: '400' })
+const mono = Enriqueta({ subsets: ['serif'], weight: '400' })
 
 export const metadata: Metadata = {
   title: "Curie Cha",
@@ -23,7 +23,7 @@ export default function RootLayout({
         className={mono.className}
       >
         <TabBar />
-        <div className="min-h-screen sm:px-32 pb-8 sm:p-8 font-[family-name:var(--rochester-font)]">
+        <div className="min-h-screen sm:px-32 pb-8 sm:p-8">
           {children}
         </div>
       </body>
