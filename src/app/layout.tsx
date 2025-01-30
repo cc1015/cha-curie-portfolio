@@ -3,7 +3,7 @@ import { Figtree } from 'next/font/google'
 import "./globals.css";
 import TabBar from "./components/TabBar";
 
-const mono = Figtree({ subsets: ['serif'], weight: '400' })
+const mono = Figtree({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: "Curie Cha",
