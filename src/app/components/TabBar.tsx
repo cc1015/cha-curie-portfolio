@@ -7,9 +7,6 @@ import React, { useState } from "react";
 import { usePathname } from 'next/navigation';
 
 const TabBar = () => {
-  const pathname = usePathname().slice(1,);
-  const [activeTab, setActiveTab] = useState<string>(pathname);
-
   const tabitems = [
     {
       id: 1,
@@ -37,6 +34,11 @@ const TabBar = () => {
       href: "/photos",
     },
   ];
+
+  const pathname = usePathname();
+
+  const activeTabId = tabitems.find(item => item.href === pathname)?.id;
+
 
   return (
     <nav>
@@ -70,9 +72,8 @@ const TabBar = () => {
                 key={tab.id}
                 href={tab.href}
                 className={`${
-                  activeTab === tab.title ? "text-yellow-300" : ""
+                  activeTabId === tab.id ? "text-yellow-300" : ""
                 } hover:text-yellow-300`}
-                onClick={() => setActiveTab(tab.title)}
               >
                 {tab.title}
               </Link>
