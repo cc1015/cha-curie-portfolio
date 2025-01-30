@@ -8,19 +8,9 @@ import { usePathname } from 'next/navigation';
 const TabBar = () => {
   const tabitems = [
     {
-      id: 1,
-      title: "home",
-      href: "/",
-    },
-    {
-      id: 2,
-      title: "experience",
-      href: "/experience",
-    },
-    {
-      id: 3,
-      title: "projects",
-      href: "/projects",
+      id: 5,
+      title: "photos",
+      href: "/photos",
     },
     {
       id: 4,
@@ -28,15 +18,25 @@ const TabBar = () => {
       href: "/words",
     },
     {
-      id: 5,
-      title: "photos",
-      href: "/photos",
+      id: 3,
+      title: "projects",
+      href: "/projects",
+    },
+    {
+      id: 2,
+      title: "experience",
+      href: "/experience",
+    },
+    {
+      id: 1,
+      title: "home",
+      href: "/",
     },
   ];
 
   const pathname = usePathname();
 
-  const activeTabId = tabitems.find(item => item.href === pathname)?.id;
+  const activeTabId = tabitems.find(item => pathname.includes(item.href))?.id;
 
 
   return (
@@ -66,7 +66,7 @@ const TabBar = () => {
             </a>
           </h3>
           <ul className="flex space-x-8 text-base">
-            {tabitems.map((tab) => (
+            {tabitems.reverse().map((tab) => (
               <Link
                 key={tab.id}
                 href={tab.href}

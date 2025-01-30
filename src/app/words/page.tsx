@@ -7,18 +7,18 @@ export default function base() {
     <main className="flex sm:items-start h-screen">
       <div className="flex flex-col space-y-1 items-start mx-8 sm:mx-16 w-1/2 overflow-y-auto">
         <Link
-          href="/writing/turing"
+          href="/words/turing"
           className="hover:text-yellow-300 text-right underline"
         >
           turing
         </Link>
         <Link
-          href="/writing/cancer"
+          href="/words/cancer"
           className="hover:text-yellow-300 text-right underline"
         >
           contagious cancer
         </Link>
-        <Link href="/writing/synesthesia" className="hover:text-yellow-300 underline">
+        <Link href="/words/synesthesia" className="hover:text-yellow-300 underline">
           synesthesia
         </Link>
         <br></br>
