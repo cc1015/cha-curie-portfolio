@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation';
 
 const TabBar = () => {
-  const [activeTab, setActiveTab] = useState<number>(1);
+  const pathname = usePathname().slice(1,);
+  const [activeTab, setActiveTab] = useState<string>(pathname);
 
   const tabitems = [
     {
@@ -16,18 +18,18 @@ const TabBar = () => {
     },
     {
       id: 2,
-      title: "projects",
-      href: "/projects",
-    },
-    {
-      id: 3,
       title: "experience",
       href: "/experience",
     },
     {
+      id: 3,
+      title: "projects",
+      href: "/projects",
+    },
+    {
       id: 4,
       title: "words",
-      href: "/writing",
+      href: "/words",
     },
     {
       id: 5,
@@ -68,9 +70,9 @@ const TabBar = () => {
                 key={tab.id}
                 href={tab.href}
                 className={`${
-                  activeTab === tab.id ? "text-yellow-300" : ""
+                  activeTab === tab.title ? "text-yellow-300" : ""
                 } hover:text-yellow-300`}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => setActiveTab(tab.title)}
               >
                 {tab.title}
               </Link>

@@ -49,21 +49,21 @@ export default function Base() {
   return (
     <main className="flex sm:items-start h-screen">
       <div className="flex flex-col space-y-1 items-start mx-8 sm:mx-16 w-1/2 overflow-y-auto">
-        <h1 className="text-xl">Work</h1>
+        <div>Work</div>
         {workitems.map((workitem) => (
           <div key={workitem.id} className="mb-4 pb-4 whitespace-pre-line px-2">
             {workitem.title}
           </div>
         ))}
 
-        <h1 className="text-xl">Leadership</h1>
+        <div>Leadership</div>
         {leaderitems.map((leaderitem) => (
           <div key={leaderitem.id} className="mb-4 pb-4 whitespace-pre-line px-2">
               {leaderitem.title}
           </div>
         ))}
 
-        <h1 className="text-xl">Teaching</h1>
+        <div>Teaching</div>
         {teachingitems.map((teachitem) => (
           <div key={teachitem.id} className="mb-4 pb-4 whitespace-pre-line px-2">
               {teachitem.title}

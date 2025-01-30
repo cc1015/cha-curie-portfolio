@@ -31,7 +31,9 @@ export default function base() {
           src="/the_image_disappears.jpg"
           alt="personal photo"
           className="object-contain w-2/3 h-100"
-          layout="fill"
+          layout="instrinsic"
+          width={500} 
+          height={300}
         />
         <div className="absolute h-full w-2/3 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
           <div className="text-center text-gray-300">

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Enriqueta } from 'next/font/google'
+import { Figtree } from 'next/font/google'
 import "./globals.css";
 import TabBar from "./components/TabBar";
 
-const mono = Enriqueta({ subsets: ['latin'], weight: '400' })
+const mono = Figtree({ subsets: ['serif'], weight: '400' })
 
 export const metadata: Metadata = {
   title: "Curie Cha",
