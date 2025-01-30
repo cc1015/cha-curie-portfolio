@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import React, { useState } from "react";
 import { usePathname } from 'next/navigation';
 
 const TabBar = () => {
