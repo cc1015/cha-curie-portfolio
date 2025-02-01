@@ -40,6 +40,14 @@ const projects = [
       "This repo contains notebook files of mini data science projects.\n- Condorcet Jury Theorem Simulation\n- Infection Simulation\n- Gene Disease Assocation Exploration\n- Tree Density Map of Boston\n- Crime and Cannabis Correlation in Boston",
     href: "https://github.com/cc1015/data-science-mini-projects",
   },
+  {
+    id: 6, 
+    title: "Personal Website",
+    description:
+      "This website! Made with React and Tailwind CSS, deployed with Vercel.",
+    href: "https://github.com/cc1015/cha-curie-portfolio",
+  }
+
 ];
 
 export default function Base() {
