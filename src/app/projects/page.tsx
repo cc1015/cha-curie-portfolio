@@ -40,6 +40,14 @@ const projects = [
       "This repo contains notebook files of mini data science projects.\n- Condorcet Jury Theorem Simulation\n- Infection Simulation\n- Gene Disease Assocation Exploration\n- Tree Density Map of Boston\n- Crime and Cannabis Correlation in Boston",
     href: "https://github.com/cc1015/data-science-mini-projects",
   },
+  {
+    id: 6, 
+    title: "Personal Website",
+    description:
+      "This website! Made with React and Tailwind CSS, deployed with Vercel.",
+    href: "https://github.com/cc1015/cha-curie-portfolio",
+  }
+
 ];
 
 export default function Base() {
@@ -80,8 +88,8 @@ export default function Base() {
         <div key={project.id} className="mb-4 pb-4">
           <button
             onClick={() => handleToggle(project.id)}
-            className={`font-bold px-2 text-left underline hover:text-yellow-300 ${
-              expandedItemIds.includes(project.id) ? "text-yellow-300" : ""
+            className={`font-bold px-2 text-left underline hover:text-yellow-400 ${
+              expandedItemIds.includes(project.id) ? "text-yellow-400" : ""
             }`}
           >
             {project.title}
@@ -92,7 +100,7 @@ export default function Base() {
               <a
                 href={project.href}
                 target="_blank"
-                className="flex items-center"
+                className="flex items-center hover:text-yellow-400"
               ><FaGithub size={24} />
               </a>{" "}
               <p

@@ -5,21 +5,18 @@ export default function base() {
     <main className="flex space-x-8 mx-8 sm:mx-16 h-screen">
       <div className="flex flex-col items-center items-start w-1/2 h-5/6 top-0 relative group inline-block">
         <Image
-          src="/bumblebee.jpg"
+          src="/railway.jpg"
           alt="dali painting"
           className="block"
           layout="fill"
         />
         <div
-          className="absolute h-full opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
+          className="absolute h-full w-full opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
           <div className="text-center text-gray-300">
-            Dream Caused by the Flight of a Bee Around a Pomegranate a Second
-            Before Awakening, Dali
+            Ossification prématurée d'une gare, Dali
             <br />
             <br />
-            Credit: © 2009 Salvador Dalí, Gala-Salvador Dalí Foundation /
-            Artists Rights Society (ARS), New York, Courtesy of Art Resource,
-            NY/Photo by Erich Lessing
+            Credit: ©  Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres, 2007
           </div>
         </div>
       </div>
@@ -39,7 +36,7 @@ export default function base() {
           <br />
           <br />
           </p>
-          <p>Lately, I have been digging into machine learning capabilities for drug discovery.
+          <p className="text-justify">Lately, I have been digging into machine learning capabilities for drug discovery.
         </p>
       </div>
     </main>

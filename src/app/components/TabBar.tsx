@@ -41,7 +41,7 @@ const TabBar = () => {
 
   return (
     <nav>
-      <div className="sm:pt-32 sm:pl-32 font-[family-name:var(--font-geist-sans)]">
+      <div className="sm:pt-32 sm:pl-32">
         <main className="flex flex-col items-start ml-8 sm:ml-16">
           <div className="flex space-x-2 justify-start">
             <h3 className="text-left text-2xl">curie cha</h3>
@@ -52,7 +52,7 @@ const TabBar = () => {
               href="https://github.com/cc1015"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-yellow-300"
+              className="hover:text-yellow-400"
             >
               <FaGithub size={20} />
             </a>&nbsp;&nbsp;/&nbsp;&nbsp;
@@ -60,7 +60,7 @@ const TabBar = () => {
               href="https://www.linkedin.com/in/curiecha"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-yellow-300"
+              className="hover:text-yellow-400"
             >
               <FaLinkedin size={20} />
             </a>
@@ -71,8 +71,8 @@ const TabBar = () => {
                 key={tab.id}
                 href={tab.href}
                 className={`${
-                  activeTabId === tab.id ? "text-yellow-300" : ""
-                } hover:text-yellow-300`}
+                  activeTabId === tab.id ? "text-yellow-400" : ""
+                } hover:text-yellow-400`}
               >
                 {tab.title}
               </Link>
