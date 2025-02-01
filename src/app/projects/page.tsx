@@ -80,8 +80,8 @@ export default function Base() {
         <div key={project.id} className="mb-4 pb-4">
           <button
             onClick={() => handleToggle(project.id)}
-            className={`font-bold px-2 text-left underline hover:text-yellow-300 ${
-              expandedItemIds.includes(project.id) ? "text-yellow-300" : ""
+            className={`font-bold px-2 text-left underline hover:text-yellow-400 ${
+              expandedItemIds.includes(project.id) ? "text-yellow-400" : ""
             }`}
           >
             {project.title}
@@ -92,7 +92,7 @@ export default function Base() {
               <a
                 href={project.href}
                 target="_blank"
-                className="flex items-center"
+                className="flex items-center hover:text-yellow-400"
               ><FaGithub size={24} />
               </a>{" "}
               <p
