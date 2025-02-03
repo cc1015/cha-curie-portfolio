@@ -24,6 +24,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.Container {
+  padding-left: 64;
+  padding-right: 64;
+}
+
 .Container-light {
   color: #181512;
   background: #fffff2;
@@ -76,7 +81,7 @@ html {
 }
 
 .animate-sway {
-  animation: swayCord 3s ease-in-out infinite; /* 3 seconds for full sway cycle */
+  animation: swayCord 3s ease-in-out infinite; 
 }
 
 .Light-switch:hover {

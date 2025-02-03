@@ -19,21 +19,23 @@ const LightSwitch = () => {
   };
 
   return (
-    <main className="flex overflow-y-auto">
-      <div className="flex sm:items-start w-1/2 sticky top-0 relative group overflow-hidden">
-        <Image
-          src={`${darkMode ? "/bulb_dark.svg" : "/bulb_light.svg"}`}
-          alt="light"
-          width={125}
-          height={125}
-          className="animate-sway mr-4"
-        />
-        <div className="relative -top-16 Light-switch">
+    <main className="overflow-y-auto">
+      <div className="flex mr-30">
+        <div className="relative -top-20">
+          <Image
+            src={`${darkMode ? "/bulb_dark.svg" : "/bulb_light.svg"}`}
+            alt="light"
+            width={60}
+            height={60}
+            className="mr-4"
+          />
+        </div>
+        <div className="relative -top-20 Light-switch">
           <Image
             src={darkMode ? "/switch_dark.svg" : "/switch_light.svg"}
             alt="switch"
-            width={100}
-            height={100}
+            width={50}
+            height={50}
             className={`transition-all cursor-pointer ${
               isBouncing ? "animate-pull" : ""
             }`}

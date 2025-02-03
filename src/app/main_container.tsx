@@ -8,18 +8,21 @@ function Container({ children }) {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={`z-0 ${darkMode ? "Container-dark" : "Container-light"}`}>
-      <div className="sm:px-32 p-12"></div>
-      <div className="z-20 flex items-center justify-between sm:px-8 p-8">
-        <div className="flex-1 sm:px-8">
+    <div
+      className={`z-10 min-h-screen p-32 Container ${
+        darkMode ? "Container-dark" : "Container-light"
+      }`}
+    >
+      <div className="z-30 flex items-center">
+        <div className="flex-1 px-32 mb-10">
           <TabBar />
         </div>
       </div>
-      <div className="z-20 min-h-screen sm:px-32 pb-8 sm:p-8">{children}</div>
-      <div className="z-10 absolute top-0 right-16 mr-15 overflow-hidden">
-        <div className="flex relative">
+
+      <div className="z-20 px-32">{children}</div>
+
+      <div className="absolute top-0 right-48">
           <LightSwitch />
-        </div>
       </div>
     </div>
   );

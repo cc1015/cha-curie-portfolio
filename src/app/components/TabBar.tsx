@@ -41,7 +41,7 @@ const TabBar = () => {
   const activeTabId = tabitems.find((item) => pathname.includes(item.href))?.id;
 
   return (
-    <main className="flex flex-col items-start mx-8 sm:ml-32">
+    <main className="flex flex-col items-start">
       <div className="flex space-x-2 justify-start">
         <h3 className="text-left text-2xl">curie cha</h3>
       </div>
