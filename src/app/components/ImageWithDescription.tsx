@@ -15,7 +15,7 @@ function ImageWithDescription({ src, alt, title, credit }: ImageProps) {
         alt={alt}
         layout="intrinsic responsive"
         width={500}
-        height={300}
+        height={500}
         objectFit="cover"
       />
       <div className="absolute inline h-full w-full opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
