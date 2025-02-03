@@ -1,16 +1,21 @@
-"use client";
-import React, { useContext } from "react";
-import { useState } from "react";
+'use client';
+import React, { useContext, useState } from "react";
 import Image from "next/image";
-import { DarkModeContext } from "../context/DarkModeContext";
+import { DarkModeContext } from '../context/DarkModeContext'; 
 
 const LightSwitch = () => {
   const [isBouncing, setIsBouncing] = useState(false);
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
-  // Toggle bounce on click
+  const context = useContext(DarkModeContext);
+
+  if (!context) {
+    throw new Error("LightSwitch must be used within a DarkModeProvider");
+  }
+
+  const { darkMode, toggleDarkMode } = context;
+
   const handleClick = () => {
-    toggleDarkMode();
+    toggleDarkMode(); 
     setIsBouncing(true);
 
     setTimeout(() => {
@@ -23,7 +28,7 @@ const LightSwitch = () => {
       <div className="flex mr-30">
         <div className="relative -top-20">
           <Image
-            src={`${darkMode ? "/bulb_dark.svg" : "/bulb_light.svg"}`}
+            src={darkMode ? "/bulb_dark.svg" : "/bulb_light.svg"}
             alt="light"
             width={60}
             height={60}

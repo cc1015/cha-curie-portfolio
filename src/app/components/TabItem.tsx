@@ -9,7 +9,7 @@ type Props = {
 
 const TabItem = ({ id, title, href, hover }: Props) => {
   return (
-    <Link id={id} href={href} className={hover}>
+    <Link key={id} href={href} className={hover}>
       {title}
     </Link>
   );

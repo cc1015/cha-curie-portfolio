@@ -4,8 +4,18 @@ import { DarkModeContext } from "./context/DarkModeContext";
 import TabBar from "./components/TabBar";
 import LightSwitch from "./components/LightSwitch";
 
-function Container({ children }) {
-  const { darkMode } = useContext(DarkModeContext);
+type Props = {
+  children: React.ReactNode;
+};
+
+function Container({ children }: Props) {
+  const context = useContext(DarkModeContext);
+
+  if (!context) {
+    throw new Error('BackButton must be used within a DarkModeProvider');
+  }
+
+  const { darkMode } = context;
 
   return (
     <div

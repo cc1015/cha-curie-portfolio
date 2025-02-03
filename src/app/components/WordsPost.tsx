@@ -14,14 +14,12 @@ const WordsPost = ({ fileName }: Props) => {
   useEffect(() => {
     const fetchWords = async (fileName: string) => {
       const res = await fetch(`/words/${fileName}`);
-      console.log(res);
       const data = await res.json();
-      console.log(data);
       setWords(data.words);
     };
 
     fetchWords(fileName);
-  }, []);
+  }, [fileName]);
 
   return (
     <main>
