@@ -1,17 +1,17 @@
-@import 'normalize.css';
+@import "normalize.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: #fffff2;
-  --foreground: #0a0a0a;
+  --foreground: #181512;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #fffff2;
+    --foreground: #181512;
   }
 }
 
@@ -23,3 +23,63 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.Container {
+  padding-left: 64;
+  padding-right: 64;
+}
+
+.Container-light {
+  color: #181512;
+  background: #fffff2;
+}
+
+.Container-dark {
+  color: #fffff2;
+  background: #181512;
+}
+
+@keyframes pull {
+  0% {
+    transform: translateY(0px); 
+  }
+  10% {
+    transform: translateY(10px); 
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg); 
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg); 
+  }
+}
+
+.animate-sway {
+  animation: swayCord 3s ease-in-out infinite; 
+}
+
+.Light-switch:hover {
+  animation: pull 1s ease-in-out;
+}
+
