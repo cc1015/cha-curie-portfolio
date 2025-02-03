@@ -1,26 +1,8 @@
-'use client'
-import React, { useContext } from 'react';
-import { DarkModeContext } from '../context/DarkModeContext'; 
-import { Arrow } from 'doodle-icons';
+"use client";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const BackButton = () => {
-  const context = useContext(DarkModeContext);
-
-  if (!context) {
-    throw new Error('BackButton must be used within a DarkModeProvider');
-  }
-
-  const { darkMode } = context;
-  const iconColor = darkMode ? 'white' : 'black';
-
-  return (
-    <Arrow.ArrowLeft
-      width={30}
-      height={30}
-      fill={iconColor}
-      className="Doodle-icon"
-    />
-  );
+  return <FaArrowLeftLong className="hover:text-yellow-400" />;
 };
 
 export default BackButton;

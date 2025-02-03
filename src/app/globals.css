@@ -39,11 +39,6 @@ html {
   background: #181512;
 }
 
-.Doodle-icon:hover {
-  fill: #fdc700;
-  transition: fill 0.3s ease, stroke 0.3s ease;
-}
-
 @keyframes pull {
   0% {
     transform: translateY(0px); 

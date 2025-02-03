@@ -22,9 +22,9 @@ const WordsPost = ({ fileName }: Props) => {
   }, [fileName]);
 
   return (
-    <main>
-      <div>
-        <Link href="/words" className="btn inline-block">
+    <div>
+      <div className="mb-4">
+        <Link href="/words" className="btn">
           <BackButton />
         </Link>
       </div>
@@ -34,7 +34,7 @@ const WordsPost = ({ fileName }: Props) => {
           <br></br>
         </div>
       ))}
-    </main>
+    </div>
   );
 };
 
