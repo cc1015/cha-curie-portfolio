@@ -52,7 +52,6 @@ const projects = [
 const image = {
   src: "/swallows_tail_cellos.jpg",
   alt: "Dali's Swallow's Tail and Cellos",
-  className: "",
   title: "Swallow's Tail and Cellos, Dali",
   credit: "Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres",
 };

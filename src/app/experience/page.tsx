@@ -38,7 +38,6 @@ const teachingitems = [
 const image = {
   src: "/galatea.jpg",
   alt: "personal photo",
-  className: "",
   title: "Galatea of the Spheres, Dali",
   credit: "Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres",
 };

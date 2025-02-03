@@ -3,7 +3,6 @@ import ImageWithDescription from "./ImageWithDescription";
 type ImageProps = {
   src: string;
   alt: string;
-  className: string;
   title: string;
   credit: string;
 };
