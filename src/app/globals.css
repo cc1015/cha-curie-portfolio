@@ -1,25 +1,43 @@
-@import 'normalize.css';
+@import "normalize.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: #fffff2;
-  --foreground: #0a0a0a;
+  --foreground: #181512;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #fffff2;
+    --foreground: #181512;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  fill: var(--foreground);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.Container-light {
+  color: #181512;
+  background: #fffff2;
+  fill: #181512;
+}
+
+.Container-dark {
+  color: #fffff2;
+  background: #181512;
+  fill: #fffff2;
+}
+
+.Doodle-icon:hover {
+  fill: #fdc700;
+  transition: fill 0.3s ease, stroke 0.3s ease;
 }
