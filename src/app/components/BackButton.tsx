@@ -4,7 +4,7 @@ import { Arrow } from "doodle-icons";
 
 const BackButton = () => {
     const { darkMode } = useContext(DarkModeContext);
-    const iconColor = darkMode ? 'white' : 'black';  // Adjust colors for dark/light mode
+    const iconColor = darkMode ? 'white' : 'black'; 
 
     return (
         <Arrow.ArrowLeft 
