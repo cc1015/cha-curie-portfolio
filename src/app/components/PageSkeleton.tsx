@@ -15,9 +15,9 @@ type PageSkeletonProps = {
 
 function PageSkeleton({ children, imageProps, imageFirst }: PageSkeletonProps) {
   return (
-    <main className="md:flex sm:flex-col lg:flex-row sm:items-start gap-8">
+    <main className="gap-8 md:flex sm:max-sm:flex-col">
       <div
-        className={`flex flex-col space-y-1 w-1/2 overflow-y-auto ${
+        className={`flex-col flex space-y-1 w-full md:w-1/2 ${
           imageFirst ? "order-1" : "order-2"
         }`}
       >
@@ -25,7 +25,7 @@ function PageSkeleton({ children, imageProps, imageFirst }: PageSkeletonProps) {
       </div>
 
       <div
-        className={`flex w-1/2 relative group ${
+        className={`flex w-full md:w-1/2 relative group ${
           imageFirst ? "order-2" : "order-1"
         }`}
       >
