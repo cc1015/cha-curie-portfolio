@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { usePathname } from "next/navigation";

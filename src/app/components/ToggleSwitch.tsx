@@ -10,7 +10,7 @@ const ToggleSwitch = () => {
     throw new Error("LightSwitch must be used within a DarkModeProvider");
   }
 
-  const { darkMode, toggleDarkMode } = context;
+  const { toggleDarkMode } = context;
 
   const handleClick = () => {
     toggleDarkMode();
