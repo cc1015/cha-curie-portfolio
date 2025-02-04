@@ -2,41 +2,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 :root {
   --background: #fffff2;
   --foreground: #181512;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #fffff2;
-    --foreground: #181512;
-  }
+:root.dark {
+  --background: #181512;
+  --foreground: #fffff2;
 }
 
-body {
+body, html {
   color: var(--foreground);
   background: var(--background);
-}
-
-html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-.Container {
-  padding-left: 64;
-  padding-right: 64;
-}
-
-.Container-light {
-  color: #181512;
-  background: #fffff2;
-}
-
-.Container-dark {
-  color: #fffff2;
-  background: #181512;
+div {
+  max-width: 100%;
 }
 
 @keyframes pull {

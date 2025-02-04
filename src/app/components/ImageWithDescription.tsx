@@ -9,11 +9,11 @@ type ImageProps = {
 
 function ImageWithDescription({ src, alt, title, credit }: ImageProps) {
   return (
-    <div className="relative flex">
+    <div className="flex">
       <Image
         src={src}
         alt={alt}
-        layout="intrinsic responsive"
+        layout="intrinsic"
         width={500}
         height={500}
         objectFit="cover"

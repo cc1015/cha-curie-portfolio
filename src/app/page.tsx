@@ -11,9 +11,9 @@ const image = {
 export default function Base() {
   return (
     <PageSkeleton imageProps={image} imageFirst={false}>
-      <p className="text-justify">Hi, my name is Curie.</p>
+      <p>Hi, my name is Curie.</p>
       <br />
-      <p className="text-justify">
+      <p>
         I am a student excited about how software can help us.
         <br />
         <br />
@@ -25,7 +25,7 @@ export default function Base() {
         <br />
         <br />
       </p>
-      <p className="text-justify">
+      <p>
         Lately, I have been digging into machine learning capabilities for drug
         discovery.
       </p>
