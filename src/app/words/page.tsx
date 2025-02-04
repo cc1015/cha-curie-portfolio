@@ -2,7 +2,7 @@ import Link from "next/link";
 import PageSkeleton from "../components/PageSkeleton";
 
 const image = {
-  src: "/the_image_disappears.jpg",
+  src: "/the_image_disappears.jpeg",
   alt: "Dali's The Image Disappears",
   title: "The Image Disappears, Dali",
   credit: "Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres",
