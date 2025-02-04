@@ -1,4 +1,4 @@
-import type { NextConfig } from "next/types";
+import NextConfig from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
