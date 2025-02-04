@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import Image from 'next/image'
+import PageSkeleton from "../components/PageSkeleton";
 
 const projects = [
   {
@@ -40,10 +40,25 @@ const projects = [
       "This repo contains notebook files of mini data science projects.\n- Condorcet Jury Theorem Simulation\n- Infection Simulation\n- Gene Disease Assocation Exploration\n- Tree Density Map of Boston\n- Crime and Cannabis Correlation in Boston",
     href: "https://github.com/cc1015/data-science-mini-projects",
   },
+  {
+    id: 6,
+    title: "Personal Website",
+    description:
+      "This website! Made with React and Tailwind CSS, deployed with Vercel.",
+    href: "https://github.com/cc1015/cha-curie-portfolio",
+  },
 ];
 
+const image = {
+  src: "/swallows_tail_cellos.jpg",
+  alt: "Dali's Swallow's Tail and Cellos",
+  title: "Swallow's Tail and Cellos, Dali",
+  credit: "Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres",
+};
+
 export default function Base() {
-  const [expandedItemIds, setExpandedItemIds] = useState<number[]>([]); // Store multiple expanded items
+  // Store multiple expanded items
+  const [expandedItemIds, setExpandedItemIds] = useState<number[]>([]);
 
   // Toggle the expansion of a specific item
   const handleToggle = (id: number) => {
@@ -55,33 +70,14 @@ export default function Base() {
   };
 
   return (
-    <main className="flex overflow-y-auto">
-      <div className="flex flex-col sm:items-start w-1/2 sticky top-0 relative group inline-block">
-        <Image
-          src="/swallows_tail_cellos.jpg"
-          alt="personal photo"
-          className="object-contain"
-          layout="intrinsic"
-          width={500} 
-          height={300}
-        />
-        <div className="absolute h-full opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
-          <div className="text-center text-gray-300">
-          Swallow’s Tail and Cellos (Catastrophes Series), Dali
-            <br />
-            <br />
-            Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col space-y-1 items-start mx-8 sm:mx-16 w-3/4 overflow-y-auto">
+    <PageSkeleton imageProps={image} imageFirst={false}>
       <h1 className="text-xl">Projects</h1>
       {projects.map((project) => (
         <div key={project.id} className="mb-4 pb-4">
           <button
             onClick={() => handleToggle(project.id)}
-            className={`font-bold px-2 text-left underline hover:text-yellow-300 ${
-              expandedItemIds.includes(project.id) ? "text-yellow-300" : ""
+            className={`font-bold px-2 text-left underline hover:text-yellow-400 ${
+              expandedItemIds.includes(project.id) ? "text-yellow-400" : ""
             }`}
           >
             {project.title}
@@ -92,19 +88,19 @@ export default function Base() {
               <a
                 href={project.href}
                 target="_blank"
-                className="flex items-center"
-              ><FaGithub size={24} />
+                className="flex items-center hover:text-yellow-400"
+              >
+                <FaGithub size={24} />
               </a>{" "}
               <p
-                  dangerouslySetInnerHTML={{
-                    __html: project.description.replace(/\n/g, "<br />"),
-                  }}
-                ></p>
+                dangerouslySetInnerHTML={{
+                  __html: project.description.replace(/\n/g, "<br />"),
+                }}
+              ></p>
             </div>
           )}
         </div>
       ))}
-      </div>
-    </main>
+    </PageSkeleton>
   );
 }

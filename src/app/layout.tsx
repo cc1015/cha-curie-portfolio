@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Figtree } from 'next/font/google'
-import "./globals.css";
-import TabBar from "./components/TabBar";
+import { Figtree } from "next/font/google";
+import { DarkModeProvider } from "./context/DarkModeContext";
+import Container from "./main_container";
 
-const mono = Figtree({ subsets: ['latin'], weight: '400' })
+import "./globals.css";
+
+const mono = Figtree({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Curie Cha",
   icons: {
-    icon: '/recursive_tree.png',
-  }
+    icon: "/recursive_tree.png",
+  },
 };
 
 export default function RootLayout({
@@ -19,13 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={mono.className}
-      >
-        <TabBar />
-        <div className="min-h-screen sm:px-32 pb-8 sm:p-8">
-          {children}
-        </div>
+      <body className={mono.className}>
+        <DarkModeProvider>
+          <Container>{children}</Container>
+        </DarkModeProvider>
       </body>
     </html>
   );
