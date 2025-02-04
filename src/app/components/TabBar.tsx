@@ -40,8 +40,6 @@ const TabBar = () => {
 
   const activeTabId = tabitems.find((item) => pathname.includes(item.href))?.id;
 
-  const [checked, setChecked] = useState(false);
-
   return (
     <main className="flex flex-col">
       <h3 className="text-left text-2xl">curie cha</h3>

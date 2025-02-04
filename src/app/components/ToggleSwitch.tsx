@@ -1,6 +1,6 @@
 "use client";
 import "./ToggleSwitch.css";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { DarkModeContext } from "../context/DarkModeContext";
 
 const ToggleSwitch = () => {

@@ -36,7 +36,7 @@ function Container({ children }: Props) {
     </div>
   );
 
-  <div className="absolute top-4 md:top-8 right-4 md:right-8 lg:right-48"> -->
+  <div className="absolute top-4 md:top-8 right-4 md:right-8 lg:right-48">
         <LightSwitch />
   </div>
 }
