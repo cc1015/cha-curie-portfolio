@@ -44,7 +44,7 @@ const projects = [
     id: 6,
     title: "Personal Website",
     description:
-      "This website! Made with React and Tailwind CSS, deployed with Vercel.",
+      "This website! Made with React, Next.js, Tailwind CSS, deployed with Vercel.",
     href: "https://github.com/cc1015/cha-curie-portfolio",
   },
 ];

@@ -20,23 +20,29 @@ body, html {
   background: var(--background);
   overflow-x: hidden;
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 div {
   max-width: 100%;
+  border-color: var(--foreground);
+}
+
+main {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @keyframes pull {
   0% {
-    transform: translateY(0px); 
-  }
-  10% {
-    transform: translateY(10px); 
-  }
-  20% {
     transform: translateY(0px);
   }
-  30% {
+  40% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  70% {
     transform: translateY(-10px);
   }
   100% {
@@ -44,29 +50,13 @@ div {
   }
 }
 
-@keyframes sway {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0deg); 
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg); 
-  }
-}
-
-.animate-sway {
-  animation: swayCord 3s ease-in-out infinite; 
-}
-
 .Light-switch:hover {
   animation: pull 1s ease-in-out;
+  animation-iteration-count: 1; 
 }
 
+.animate-pull {
+  animation: pull 1s ease-in-out;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
+}
