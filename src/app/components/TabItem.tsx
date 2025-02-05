@@ -12,9 +12,6 @@ const TabItem = ({ id, title, href, hover }: Props) => {
     <Link
       key={id}
       href={href}
-      className={`${
-        activeTabId === tab.id ? "text-yellow-400" : ""
-      } hover:text-yellow-400`}
     >
       {title}
     </Link>
