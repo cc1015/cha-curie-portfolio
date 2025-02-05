@@ -50,6 +50,11 @@ main {
   }
 }
 
+.Light-switch {
+  animation: pull 1s ease-in-out;
+  animation-iteration-count: 2; 
+}
+
 .Light-switch:hover {
   animation: pull 1s ease-in-out;
   animation-iteration-count: 1; 
