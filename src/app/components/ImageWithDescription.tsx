@@ -9,17 +9,16 @@ type ImageProps = {
 
 function ImageWithDescription({ src, alt, title, credit }: ImageProps) {
   return (
-    <div className="flex">
+    <div className="image-container relative flex">
       <Image
         src={src}
         alt={alt}
         layout="intrinsic"
-        width={500}
-        height={500}
-        objectFit="cover"
+        width={450}
+        height={450}
       />
-      <div className="absolute inline h-full w-full opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end bg-black/50 p-4">
-        <div className="text-center text-gray-300">
+      <div className="overlay absolute h-full w-full opacity-0 transition-opacity bg-black/50 flex flex-col justify-end">
+        <div className="text-center text-gray-300 mb-4 mx-2">
           {title}
           <br />
           <br />
