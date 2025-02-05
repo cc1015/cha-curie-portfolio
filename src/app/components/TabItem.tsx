@@ -4,10 +4,9 @@ type Props = {
   id: number;
   title: string;
   href: string;
-  hover: string;
 };
 
-const TabItem = ({ id, title, href, hover }: Props) => {
+const TabItem = ({ id, title, href }: Props) => {
   return (
     <Link
       key={id}
