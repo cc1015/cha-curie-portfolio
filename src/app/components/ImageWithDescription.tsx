@@ -17,7 +17,7 @@ function ImageWithDescription({ src, alt, title, credit }: ImageProps) {
         width={450}
         height={450}
       />
-      <div className="overlay absolute h-full w-full opacity-0 transition-opacity bg-black/50 flex flex-col justify-end">
+      <div className="overlay absolute h-full w-full opacity-0 transition-opacity bg-black/50 flex flex-col justify-end hover:opacity-100">
         <div className="text-center text-gray-300 mb-4 mx-2">
           {title}
           <br />
