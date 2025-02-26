@@ -28,7 +28,7 @@ const config: Config = {
         },
         fadeIn: {
           "0%": { opacity: "0" },
-          "20%": { opacity: "1" },
+          "40%": { opacity: "1" },
           "100%": { opacity: "1" },
         },
       },
