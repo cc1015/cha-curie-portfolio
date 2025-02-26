@@ -16,6 +16,7 @@ const config: Config = {
       },
       animation: {
         pull: "pull 0.8s ease-in-out",
+        fadeIn: "fadeIn 1s ease-out forwards",
       },
       keyframes: {
         pull: {
@@ -25,9 +26,15 @@ const config: Config = {
           "70%": { transform: "translateY(-10px)" },
           "100%": { transform: "translateY(0)" },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "20%": { opacity: "1" },
+          "100%": { opacity: "1" },
+        },
       },
     },
   },
   plugins: [],
 };
+
 export default config;

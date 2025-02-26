@@ -26,8 +26,7 @@ export default function Base() {
         <br />
       </p>
       <p>
-        Lately, I have been digging into machine learning capabilities for drug
-        discovery.
+        Lately, I have been digging into natural language processing for biomedical publications.
       </p>
     </PageSkeleton>
   );
