@@ -14,9 +14,6 @@ export default function Base() {
       <p>Hi, my name is Curie.</p>
       <br />
       <p>
-        I am a student excited about how software can help us.
-        <br />
-        <br />
         My interests lie in computational modeling and software development for
         various applications of life sciences, healthcare, and natural language.
         Through these passions, I hope to contribute to scientific and social
