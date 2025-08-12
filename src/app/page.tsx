@@ -12,7 +12,6 @@ export default function Base() {
   return (
     <PageSkeleton imageProps={image} imageFirst={false}>
       <p>Hi, my name is Curie.</p>
-      <br />
       <p>
         My interests lie in computational modeling and software development for
         various applications of life sciences, healthcare, and natural language.
@@ -21,10 +20,6 @@ export default function Base() {
         Northeastern University.
         <br />
         <br />
-      </p>
-      <p>
-        Lately, I have been digging into machine learning capabilities for drug
-        discovery.
       </p>
     </PageSkeleton>
   );

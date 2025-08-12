@@ -31,8 +31,6 @@ export default function base() {
       </Link>
       <br></br>
       <br></br>
-      *[in the process of creating graphic visuals for these to break up the
-      condensed words]
     </PageSkeleton>
   );
 }
