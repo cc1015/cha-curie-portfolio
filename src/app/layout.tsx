@@ -5,6 +5,8 @@ import Container from "./main_container";
 
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/next"
+
 const mono = Figtree({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
@@ -25,6 +27,7 @@ export default function RootLayout({
         <DarkModeProvider>
           <Container>{children}</Container>
         </DarkModeProvider>
+        <Analytics />
       </body>
     </html>
   );
