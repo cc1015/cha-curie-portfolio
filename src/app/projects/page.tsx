@@ -70,7 +70,7 @@ export default function Base() {
   };
 
   return (
-    <PageSkeleton imageProps={image} imageFirst={false}>
+    <PageSkeleton imageProps={image} imageFirst={true}>
       <h1 className="text-xl">Projects</h1>
       {projects.map((project) => (
         <div key={project.id} className="mb-4 pb-4">
