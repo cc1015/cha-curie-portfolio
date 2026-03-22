@@ -6,19 +6,24 @@ import PageSkeleton from "../components/PageSkeleton";
 const workitems = [
   {
     id: 1,
-    title: "Computational Biology Co-op (Antibody Engineering), Takeda Pharmaceuticals",
+    title: "Undergraduate Researcher, Vázquez-García Lab",
+    href: "https://vazquezgarcialab.mgh.harvard.edu/"
   },
   {
     id: 2,
+    title: "Computational Biology Co-op (Antibody Engineering), Takeda Pharmaceuticals",
+  },
+  {
+    id: 3,
     title: "Reseach Assistant, Gyori Lab for Computational Biomedicine",
     href: "https://gyorilab.github.io/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Research Informatics Co-op, Tango Therapeutics",
   },
   {
-    id: 4,
+    id: 5,
     title: "Lab Manager, Language and Mind Lab",
     href: "https://berentlab.sites.northeastern.edu/",
   },
