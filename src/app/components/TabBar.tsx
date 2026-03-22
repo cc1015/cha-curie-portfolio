@@ -9,6 +9,11 @@ import LightSwitch from "./LightSwitch";
 const TabBar = () => {
   const tabitems = [
     {
+      id: 5,
+      title: "photos",
+      href:"/photos"
+    },
+    {
       id: 4,
       title: "words",
       href: "/words",

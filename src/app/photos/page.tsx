@@ -12,7 +12,7 @@ export default function Base() {
       "/CurieChaGraceBowersDSC_0229.jpg",
       "/DSC_0223.jpg",
     ],
-    desc: "levitate music festival // grace bowers shredding",
+    desc: "levitate music festival // grace bowers",
   };
 
   const row_3 = {
