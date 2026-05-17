@@ -23,11 +23,6 @@ body, html {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-div {
-  max-width: 100%;
-  border-color: var(--foreground);
-}
-
 main {
   transition: background-color 0.3s ease, color 0.3s ease;
 }

@@ -13,14 +13,10 @@ export default function Base() {
     <PageSkeleton imageProps={image} imageFirst={false}>
       <p>Hi, my name is Curie.</p>
       <p>
-        My interests lie in computational modeling and software development for
-        various applications of life sciences, healthcare, and natural language.
-        Through these passions, I hope to contribute to scientific and social
-        progress. I am studying computer science, biology, and math at
-        Northeastern University.
-        <br />
-        <br />
-      </p>
+        My interests lie in computational modeling and software development for life sciences. I'm currently at the{' '} 
+        <a href="https://vazquezgarcialab.mgh.harvard.edu/" target="_blank" className="underline hover:text-yellow-400">Vázquez-García Lab</a> exploring
+        spatio-temporal tumor evolution.
+      </p> 
     </PageSkeleton>
   );
 }
