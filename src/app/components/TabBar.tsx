@@ -1,81 +1,60 @@
 "use client";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import LightSwitch from "./LightSwitch";
 
-// a component representing the tab bar
+const tabItems = [
+  { title: "home", href: "/" },
+  { title: "experience", href: "/experience" },
+  { title: "projects", href: "/projects" },
+  { title: "posts", href: "/words" },
+  { title: "photos", href: "/photos" },
+];
+
+const isActive = (pathname: string, href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+
 const TabBar = () => {
-  const tabitems = [
-    {
-      id: 5,
-      title: "photos",
-      href:"/photos"
-    },
-    {
-      id: 4,
-      title: "words",
-      href: "/words",
-    },
-    {
-      id: 3,
-      title: "projects",
-      href: "/projects",
-    },
-    {
-      id: 2,
-      title: "experience",
-      href: "/experience",
-    },
-    {
-      id: 1,
-      title: "home",
-      href: "/",
-    },
-  ];
-
   const pathname = usePathname();
-
-  const activeTabId = tabitems.find((item) => pathname.includes(item.href))?.id;
 
   return (
     <div className="flex flex-col border-t">
       <div className="flex-1 text-left">
-        <h3 className="text-xl sm:text-2xl">curie cha</h3>
-        <div className="flex">
-          <h3 className="text-left text-xs flex mb-2 sm:text-sm">
-            cha[dot]c[at]northeastern[dot]edu&nbsp;&nbsp;/&nbsp;&nbsp;
-            <Link
-              href="https://github.com/cc1015"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-yellow-400"
-            >
-              <FaGithub className="w-3 h-3 sm:w-4 sm:h-4" />
-            </Link>
-            &nbsp;&nbsp;/&nbsp;&nbsp;
-            <Link
-              href="https://www.linkedin.com/in/curiecha"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-yellow-400"
-            >
-              <FaLinkedin className="w-3 h-3 sm:w-4 sm:h-4" />
-            </Link>
-          </h3>
+        <h3 className="text-xl sm:text-2xl">Curie Cha</h3>
+        <div className="flex items-center text-xs sm:text-sm mb-2 gap-2">
+          <Link
+            href="https://www.linkedin.com/in/curiecha"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="hover:text-yellow-400"
+          >
+            <FaLinkedin className="w-3 h-3 sm:w-4 sm:h-4" />
+          </Link>
+          <span aria-hidden="true">/</span>
+          <Link
+            href="https://github.com/cc1015"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="hover:text-yellow-400"
+          >
+            <FaGithub className="w-3 h-3 sm:w-4 sm:h-4" />
+          </Link>
         </div>
         <ul className="flex max-w-full">
-          {tabitems.reverse().map((tab) => (
-            <Link
-              key={tab.id}
-              href={tab.href}
-              className={`text-xs sm:text-base mr-2 md:mr-4 lg:mr-8 justify-between ${
-                activeTabId === tab.id ? "text-yellow-400" : ""
-              } hover:text-yellow-400`}
-            >
-              {tab.title}
-            </Link>
+          {tabItems.map((tab) => (
+            <li key={tab.href} className="mr-2 md:mr-4 lg:mr-8">
+              <Link
+                href={tab.href}
+                className={`text-xs sm:text-base hover:text-yellow-400 ${
+                  isActive(pathname, tab.href) ? "text-yellow-400" : ""
+                }`}
+              >
+                {tab.title}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>

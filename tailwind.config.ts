@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderColor: {
+        DEFAULT: "currentColor",
+      },
       colors: {
         "dark-background": "#181512",
         "dark-foreground": "#fffff2",

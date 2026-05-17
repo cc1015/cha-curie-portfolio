@@ -13,13 +13,7 @@ function ImageWithDescription({ src, alt, title, credit }: ImageProps) {
   return (
     <div className="image-container relative flex opacity-0 animate-fadeIn">
       <LazyLoad>
-        <Image
-          src={src}
-          alt={alt}
-          layout="intrinsic"
-          width={450}
-          height={450}
-        />
+        <Image src={src} alt={alt} width={450} height={450} />
       </LazyLoad>
       <div className="overlay absolute h-full w-full opacity-0 transition-opacity bg-black/50 flex flex-col justify-end hover:opacity-100">
         <div className="text-center text-gray-300 mb-4 mx-2">

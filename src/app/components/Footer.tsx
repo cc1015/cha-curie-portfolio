@@ -1,5 +1,7 @@
 const Footer = () => {
-  return <div className="border-t">&copy; 2024 Curie Cha</div>;
+  return (
+    <div className="border-t">&copy; {new Date().getFullYear()} Curie Cha</div>
+  );
 };
 
 export default Footer;

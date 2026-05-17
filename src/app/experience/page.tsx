@@ -1,45 +1,41 @@
 "use client";
 import Link from "next/link";
-import { BoxArrowUpRight } from "react-bootstrap-icons";
 import PageSkeleton from "../components/PageSkeleton";
 
-const workitems = [
+type Item = {
+  role: string;
+  org: string;
+  href?: string;
+};
+
+const education = {
+  degree: "B.S. Computer Science and Biology, Minor in Math",
+  school: "Northeastern University",
+};
+
+const items: Item[] = [
   {
-    id: 1,
-    title: "Undergraduate Researcher, Vázquez-García Lab",
-    href: "https://vazquezgarcialab.mgh.harvard.edu/"
+    role: "Undergraduate Researcher",
+    org: "Vázquez-García Lab",
+    href: "https://vazquezgarcialab.mgh.harvard.edu/",
   },
   {
-    id: 2,
-    title: "Computational Biology Co-op (Antibody Engineering), Takeda Pharmaceuticals",
+    role: "Computational Biology Co-op (Antibody Engineering)",
+    org: "Takeda Pharmaceuticals",
   },
   {
-    id: 3,
-    title: "Reseach Assistant, Gyori Lab for Computational Biomedicine",
+    role: "Research Assistant",
+    org: "Gyori Lab for Computational Biomedicine",
     href: "https://gyorilab.github.io/",
   },
   {
-    id: 4,
-    title: "Research Informatics Co-op, Tango Therapeutics",
+    role: "Research Informatics Co-op",
+    org: "Tango Therapeutics",
   },
   {
-    id: 5,
-    title: "Lab Manager, Language and Mind Lab",
+    role: "Lab Manager",
+    org: "Language and Mind Lab",
     href: "https://berentlab.sites.northeastern.edu/",
-  },
-];
-
-const leaderitems = [
-  {
-    id: 4,
-    title: "Tech Lead, ViTAL Healthcare Hackathon Organizing Team",
-  },
-];
-
-const teachingitems = [
-  {
-    id: 5,
-    title: "Teaching Assistant/Peer Tutor",
   },
 ];
 
@@ -50,39 +46,44 @@ const image = {
   credit: "Credit: © 2014 Salvador Dalí, Fundació Gala-Salvador Dalí, Figueres",
 };
 
+function Org({ org, href }: { org: string; href?: string }) {
+  if (!href) return <span className="italic">{org}</span>;
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="italic underline decoration-dotted underline-offset-4 hover:text-yellow-400"
+    >
+      {org}
+    </Link>
+  );
+}
+
 export default function Base() {
   return (
     <PageSkeleton imageProps={image} imageFirst={true}>
-      <div>Work</div>
-      {workitems.map((workitem) => (
-        <div
-          key={workitem.id}
-          className="flex mb-4 pb-4 whitespace-pre-line px-2"
-        >
-          <span className="flex">
-            {workitem.title}
-            {workitem.href && (
-              <Link href={workitem.href} target="_blank" className="ml-1">
-                <BoxArrowUpRight size={10} />
-              </Link>
-            )}
-          </span>
+      <div className="text-sm sm:text-base leading-relaxed">
+        <div>
+          <div>{education.degree}</div>
+          <div className="opacity-70">
+            <Org org={education.school} />
+          </div>
         </div>
-      ))}
 
-      <div>Leadership</div>
-      {leaderitems.map((leaderitem) => (
-        <div key={leaderitem.id} className="mb-4 pb-4 whitespace-pre-line px-2">
-          {leaderitem.title}
-        </div>
-      ))}
+        <hr className="opacity-20 my-6" />
 
-      <div>Teaching</div>
-      {teachingitems.map((teachitem) => (
-        <div key={teachitem.id} className="mb-4 pb-4 whitespace-pre-line px-2">
-          {teachitem.title}
-        </div>
-      ))}
+        <ul className="space-y-4">
+          {items.map((item, i) => (
+            <li key={i}>
+              <div>{item.role}</div>
+              <div className="opacity-70">
+                <Org org={item.org} href={item.href} />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </PageSkeleton>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useState, ReactNode } from 'react';
+import React, { createContext, useEffect, useState, ReactNode } from "react";
 
 interface DarkModeContextType {
   darkMode: boolean;
@@ -8,16 +8,26 @@ interface DarkModeContextType {
 
 const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined);
 
-interface DarkModeProviderProps {
-  children: ReactNode;
-}
+const STORAGE_KEY = "darkMode";
 
-const DarkModeProvider = ({ children }: DarkModeProviderProps) => {
-  const [darkMode, setDarkMode] = useState(false);
+const DarkModeProvider = ({ children }: { children: ReactNode }) => {
+  // Default matches the inline pre-hydration script in layout.tsx
+  const [darkMode, setDarkMode] = useState(true);
 
-  const toggleDarkMode = () => {
-    setDarkMode(prev => !prev);
-  };
+  // Sync state from the class the pre-hydration script set on <html>
+  useEffect(() => {
+    setDarkMode(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  // Apply state to DOM and persist
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+    try {
+      localStorage.setItem(STORAGE_KEY, darkMode ? "dark" : "light");
+    } catch {}
+  }, [darkMode]);
+
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
