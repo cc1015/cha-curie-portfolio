@@ -2,7 +2,6 @@
 import React from "react";
 import { AnimatePresence } from "framer-motion";
 import TabBar from "./components/TabBar";
-import Footer from "./components/Footer";
 
 type Props = {
   children: React.ReactNode;
@@ -16,9 +15,6 @@ function Container({ children }: Props) {
           <TabBar />
         </div>
         <div className="flex-grow">{children}</div>
-        <div className="mt-8">
-          <Footer />
-        </div>
       </main>
     </AnimatePresence>
   );

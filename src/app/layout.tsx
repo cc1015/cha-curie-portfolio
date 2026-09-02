@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Runs before React hydrates so the theme is applied without a flash.
 const noFlashScript = `(function(){try{var s=localStorage.getItem('darkMode');var dark=s?s==='dark':true;if(dark)document.documentElement.classList.add('dark');}catch(e){document.documentElement.classList.add('dark');}})();`;
 
 export default function RootLayout({

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { DarkModeContext } from '../context/DarkModeContext'; 
 
 const LightSwitch = () => {
-  const [isBouncing, setIsBouncing] = useState(false); // Manage state for click animation
+  const [isBouncing, setIsBouncing] = useState(false);
 
   const context = useContext(DarkModeContext);
 
@@ -16,9 +16,8 @@ const LightSwitch = () => {
 
   const handleClick = () => {
     toggleDarkMode();
-    setIsBouncing(true); // Trigger bounce on click
+    setIsBouncing(true);
 
-    // Reset the bounce state after animation (1 second)
     setTimeout(() => {
       setIsBouncing(false);
     }, 1000);
