@@ -7,7 +7,6 @@ type Props = {
   fileName: string;
 };
 
-// a component representing a blog post
 const WordsPost = ({ fileName }: Props) => {
   const [words, setWords] = useState<string[]>([]);
 

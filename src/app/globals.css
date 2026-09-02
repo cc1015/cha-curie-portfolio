@@ -8,11 +8,19 @@
 :root {
   --background: #fffff2;
   --foreground: #181512;
+  --rule: #181512;
+  --rule-strong: rgba(24, 21, 18, 0.42);
+  --well: rgba(24, 21, 18, 0.04);
+  --muted: rgba(24, 21, 18, 0.6);
 }
 
 :root.dark {
   --background: #181512;
   --foreground: #fffff2;
+  --rule: #fffff2;
+  --rule-strong: rgba(255, 255, 242, 0.4);
+  --well: rgba(255, 255, 242, 0.05);
+  --muted: rgba(255, 255, 242, 0.6);
 }
 
 body, html {
