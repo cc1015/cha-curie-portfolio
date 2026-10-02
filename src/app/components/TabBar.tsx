@@ -7,7 +7,6 @@ import LightSwitch from "./LightSwitch";
 const tabItems = [
   { title: "home", href: "/" },
   { title: "projects", href: "/projects" },
-  { title: "posts", href: "/words" },
   { title: "photos", href: "/photos" },
 ];
 
