@@ -5,9 +5,9 @@ import Link from "next/link";
 import LightSwitch from "./LightSwitch";
 
 const tabItems = [
-  { title: "home", href: "/" },
-  { title: "projects", href: "/projects" },
-  { title: "photos", href: "/photos" },
+  { title: "Home", href: "/" },
+  { title: "Projects", href: "/projects" },
+  { title: "Other", href: "/other" },
 ];
 
 const isActive = (pathname: string, href: string) =>
